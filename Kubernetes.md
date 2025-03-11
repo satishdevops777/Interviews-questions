@@ -57,7 +57,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-```
   template:
     metadata:
       labels:
@@ -66,3 +65,5 @@ spec:
       containers:
       - name: nginx
         image: nginx:latest
+
+```
