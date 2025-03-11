@@ -160,3 +160,63 @@ Written In	             C, Ruby	                         Java
 Performance	      Lightweight, faster      	        Heavier, more features
 Use Case	        Log collection & forwarding	        Log processing
 ```
+
+## 6. Splunk
+1. What is Splunk, and why is it used?
+```
+Answer:
+Splunk is a log analysis and monitoring tool that collects, indexes, and visualizes machine-generated data. It is used for log management, security analytics, and real-time monitoring.
+```
+2. What are the main components of Splunk?
+```
+Answer:
+Indexer: Stores and indexes incoming log data.
+Search Head: Provides a web interface for searching and analyzing logs.
+Forwarder: Collects and sends logs to the Indexer.
+Deployment Server: Manages configurations for forwarders.
+```
+3. How does Splunk forward data from a remote system?
+```
+Answer:
+Using Splunk Universal Forwarder (UF), which collects logs and sends them to the Splunk Indexer.
+```
+4. What are Splunk sourcetypes?
+```
+Answer:
+Sourcetypes define how Splunk parses incoming data, helping categorize logs (e.g., syslog, apache_access).
+```
+5. How do you search logs in Splunk?
+```
+Answer:
+Using Splunk Search Processing Language (SPL):
+index=web_logs sourcetype=apache_access | stats count by status
+```
+6. What is a Splunk Index?
+```
+Answer:
+A Splunk Index is a database-like structure where Splunk stores and retrieves data efficiently.
+```
+7. How do you create a Splunk alert?
+```
+Answer:
+Go to Search & Reporting → Run a query.
+Click Save As → Alert.
+Define a trigger condition (e.g., more than 100 errors in 5 minutes).
+```
+8. What is a Splunk dashboard?
+```
+Answer:
+A Splunk dashboard is a collection of visualizations (charts, tables) created using SPL queries.
+```
+9. How does Splunk integrate with third-party tools?
+```
+Answer:
+Using Splunk Apps & Add-ons (e.g., Splunk for AWS, Splunk for Kubernetes).
+REST API to send and retrieve log data.
+```
+10. What is Splunk Cluster and its types?
+```
+Answer:
+Indexer Cluster: Replicates indexed data for high availability.
+Search Head Cluster: Distributes searches across multiple nodes.
+```
